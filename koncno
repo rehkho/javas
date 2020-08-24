@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>bo ze</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+    #tijelo {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(230, 230, 230);
+        font-family: Segoe UI;
+    }
+    
+    #ono_znas_naslov {
+        font-family: Harlow Solid;
+        font-size: 5em;
+        font-weight: 500;
+        color: white;
+        background: radial-gradient(circle, rgba(143, 11, 195, 1) 16%, rgba(143, 11, 195, 1) 38%, rgba(165, 62, 205, 1) 70%, rgba(192, 124, 218, 1) 100%);
+        top: 0;
+        margin-top: -0rem;
+        width: 100%;
+        height: auto;
+        padding: 1.4% 0% 1.4% 0%;
+        border-bottom: black;
+        border-bottom-width: 2px;
+        -webkit-box-shadow: 0px 2px 6px 3px rgba(192, 124, 218, 0.93);
+        -moz-box-shadow: 0px 2px 6px 3px rgba(192, 124, 218, 0.93);
+        box-shadow: 0px 2px 6px 3px rgba(192, 124, 218, 0.93);
+    }
+    
+    .forma_ideale {
+        display: flex;
+        margin-left: 10%;
+    }
+    
+    #sabmit_vish {
+        color: #fff !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: rgba(203, 40, 212, 1);
+        background: -moz-linear-gradient(left, rgba(203, 40, 212, 1) 0%, rgba(203, 40, 212, 1) 2%, rgba(185, 34, 200, 1) 20%, rgba(143, 21, 173, 1) 61%, rgba(214, 39, 179, 1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(203, 40, 212, 1)), color-stop(2%, rgba(203, 40, 212, 1)), color-stop(20%, rgba(185, 34, 200, 1)), color-stop(61%, rgba(143, 21, 173, 1)), color-stop(100%, rgba(214, 39, 179, 1)));
+        background: -webkit-linear-gradient(left, rgba(203, 40, 212, 1) 0%, rgba(203, 40, 212, 1) 2%, rgba(185, 34, 200, 1) 20%, rgba(143, 21, 173, 1) 61%, rgba(214, 39, 179, 1) 100%);
+        background: -o-linear-gradient(left, rgba(203, 40, 212, 1) 0%, rgba(203, 40, 212, 1) 2%, rgba(185, 34, 200, 1) 20%, rgba(143, 21, 173, 1) 61%, rgba(214, 39, 179, 1) 100%);
+        background: -ms-linear-gradient(left, rgba(203, 40, 212, 1) 0%, rgba(203, 40, 212, 1) 2%, rgba(185, 34, 200, 1) 20%, rgba(143, 21, 173, 1) 61%, rgba(214, 39, 179, 1) 100%);
+        background: linear-gradient(to right, rgba(203, 40, 212, 1) 0%, rgba(203, 40, 212, 1) 2%, rgba(185, 34, 200, 1) 20%, rgba(143, 21, 173, 1) 61%, rgba(214, 39, 179, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#cb28d4', endColorstr='#d627b3', GradientType=1);
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+        transition: all 0.4s ease 0s;
+        margin-left: 4%;
+        font-size: 2em;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    
+    #sabmit_vish:hover {
+        background: #434343;
+        letter-spacing: 0.4%px;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+        transition: all 0.4s ease 0s;
+        cursor: pointer;
+    }
+    
+    #text_za_ukc {
+        border-style: none none solid none;
+        width: 59%;
+        font-size: 1.6em;
+        padding-left: 1%;
+        transition: all .1s ease-in-out;
+    }
+    
+    #text_za_ukc:hover {
+        transform: scale(1.01);
+    }
+    
+    #linija {
+        margin-top: 5%;
+        border-top: 2px solid rgb(165, 165, 165);
+    }
+    
+    .futrr {
+        background-color: rgb(88, 88, 88);
+        color: white;
+        font-size: 2em;
+        font-family: monospace;
+    }
+    
+    .futrr {
+        bottom: 0px;
+        margin-bottom: -233px;
+        padding: 1% 0% 0.3% 6%;
+        margin-top: 1%;
+        -webkit-box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.79);
+        -moz-box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.79);
+        box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.79);
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #maj_mejl {
+        margin-top: -1.3%;
+        font-size: .84em;
+    }
+    
+    #maj_insta {
+        margin-top: -.5%;
+        font-size: .84em;
+    }
+    
+    #futer_jelde {
+        margin-top: 5%;
+        font-size: 1em;
+    }
+    
+    #insta_sl {
+        margin-top: 1%;
+        transition: all .1s ease-in-out;
+    }
+    
+    #insta_sl:hover {
+        transform: scale(1.1);
+    }
+    
+    #slika_mail {
+        transition: all .1s ease-in-out;
+    }
+    
+    #slika_mail:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<body id="tijelo">
+    <script>
+        src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    </script>
+    <script>
+        function dugme() {
+            var divizija = document.createElement("div")
+            divizija.style.backgroundColor = "rgba(100, 24, 122, 0.79)"
+            var dobitak = document.getElementById("text_za_ukc").value
+            divizija.style.color = "white"
+            divizija.style.fontSize = "2.1em"
+            divizija.style.margin = "1% 0% 1% 0%"
+            divizija.style.padding = "1.3% 10% 1.3% 10%"
+            divizija.style.webkitBoxShadow = "0px 0px 5px 1px rgba(62,14,77,1)"
+            divizija.style.boxShadow = "0px 0px 5px 1px rgba(62,14,77,1)"
+            divizija.innerHTML = dobitak
+
+            if (dobitak !== "") {
+                $(divizija).hide().fadeIn(1000)
+            } else {
+                alert("The input field is required!")
+            }
+
+            document.getElementById("mojDiv").appendChild(divizija)
+        }
+    </script>
+    <p id="ono_znas_naslov" align="center">Online Wishlist</p>
+
+    <form class="forma_ideale">
+        <input type="text" id="text_za_ukc" placeholder="Add a wish">
+        <button type="button" id="sabmit_vish" onclick="dugme()">Add</button>
+    </form>
+    <hr id="linija">
+
+    <div id='mojDiv'></div>
+
+    <div class="futrr">
+        <div class="info">
+            <div class="mail">
+                <a target="_blank" href="https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                    <img src="https://i.imgur.com/hFapAlK.png" alt="Gmail logo" id="slika_mail">
+                    <p id="maj_mejl">fsuvajacc@gmail.com</p>
+                </a>
+            </div>
+
+            <div class="insta">
+                <a target="_blank" href="https://www.instagram.com/fsuvajac/">
+                    <img id="insta_sl" src="https://i.imgur.com/mGkzKR5.png" alt="my instagram">
+                    <p id="maj_insta">@fsuvajac</p>
+                </a>
+            </div>
+        </div>
+        <p id="futer_jelde">Filip Suvajac ©</p>
+    </div>
+</body>
+
+</html>
