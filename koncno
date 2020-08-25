@@ -146,6 +146,7 @@
     <script>
         function dugme() {
             var divizija = document.createElement("div")
+            divizija.id = new Date().getTime() //unikaten id
             divizija.style.backgroundColor = "rgba(100, 24, 122, 0.79)"
             var dobitak = document.getElementById("text_za_ukc").value
             divizija.style.color = "white"
@@ -157,7 +158,9 @@
             divizija.innerHTML = dobitak
             divizija.style.wordWrap = "break-word"
             divizija.style.maxWidth = "83%"
-
+            divizija.style.border = "3px solid transparent"
+            divizija.style.borderImage = "url(https://img.lovepik.com/element/40130/0137.png_860.png) 20% round"
+            sacuvanje()
 
             divizija.onmouseover = function() {
                 mouseOver()
@@ -165,10 +168,6 @@
 
             divizija.onmouseout = function() {
                 mouseOut()
-            }
-
-            function divf() {
-                divizija.style.textDecoration = "line-through"
             }
 
             function mouseOver() {
@@ -187,6 +186,32 @@
                 alert("The input field is required!")
             }
 
+            function sacuvanje() {
+                localStorage.storedList = document.getElementById("mojDiv").innerHTML
+            }
+
+            function loudiranje() {
+                document.getElementById("mojDiv").innerHTML = localStorage.storedList;
+                for (var i = 0; i < list.children.length; i++) {
+                    list.children[i].onclick = removeItem;
+                }
+            }
+
+            $(divizija).on('contextmenu', function(event) {
+                let id = event.target.id
+
+                let isDelete = confirm('Delete?')
+                if (isDelete == true) {
+                    document.getElementById(id).remove()
+                    document.getElementById("mojDiv").removeChild(this);
+                    sacuvanje()
+                }
+            })
+
+        }
+
+        if (localStorage.storedList) {
+            loudiranje()
         }
     </script>
     <p id="ono_znas_naslov" align="center">Online Wishlist</p>
