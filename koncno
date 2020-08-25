@@ -142,8 +142,7 @@
 </style>
 
 <body id="tijelo">
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         function dugme() {
             var divizija = document.createElement("div")
@@ -156,14 +155,38 @@
             divizija.style.webkitBoxShadow = "0px 0px 5px 1px rgba(62,14,77,1)"
             divizija.style.boxShadow = "0px 0px 5px 1px rgba(62,14,77,1)"
             divizija.innerHTML = dobitak
+            divizija.style.wordWrap = "break-word"
+            divizija.style.maxWidth = "83%"
 
-            if (dobitak !== "") {
-                $(divizija).hide().fadeIn(1000)
+
+            divizija.onmouseover = function() {
+                mouseOver()
+            }
+
+            divizija.onmouseout = function() {
+                mouseOut()
+            }
+
+            function divf() {
+                divizija.style.textDecoration = "line-through"
+            }
+
+            function mouseOver() {
+                divizija.style.backgroundColor = "rgba(52, 25, 59, 0.79)"
+                divizija.style.cursor = "pointer"
+            }
+
+            function mouseOut() {
+                divizija.style.backgroundColor = "rgba(100, 24, 122, 0.79)"
+            }
+
+            if (dobitak.trim().length != 0) {
+                $(divizija).hide().fadeIn(500)
+                document.getElementById("mojDiv").appendChild(divizija)
             } else {
                 alert("The input field is required!")
             }
 
-            document.getElementById("mojDiv").appendChild(divizija)
         }
     </script>
     <p id="ono_znas_naslov" align="center">Online Wishlist</p>
