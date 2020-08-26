@@ -13,7 +13,7 @@
         background-color: rgb(230, 230, 230);
         font-family: Segoe UI;
     }
-    
+
     #ono_znas_naslov {
         font-family: Harlow Solid;
         font-size: 5em;
@@ -31,12 +31,12 @@
         -moz-box-shadow: 0px 2px 6px 3px rgba(192, 124, 218, 0.93);
         box-shadow: 0px 2px 6px 3px rgba(192, 124, 218, 0.93);
     }
-    
+
     .forma_ideale {
         display: flex;
         margin-left: 10%;
     }
-    
+
     #sabmit_vish {
         color: #fff !important;
         text-transform: uppercase;
@@ -58,7 +58,7 @@
         padding-left: 4%;
         padding-right: 4%;
     }
-    
+
     #sabmit_vish:hover {
         background: #434343;
         letter-spacing: 0.4%px;
@@ -68,7 +68,7 @@
         transition: all 0.4s ease 0s;
         cursor: pointer;
     }
-    
+
     #text_za_ukc {
         border-style: none none solid none;
         width: 59%;
@@ -76,23 +76,23 @@
         padding-left: 1%;
         transition: all .1s ease-in-out;
     }
-    
+
     #text_za_ukc:hover {
         transform: scale(1.01);
     }
-    
+
     #linija {
         margin-top: 5%;
         border-top: 2px solid rgb(165, 165, 165);
     }
-    
+
     .futrr {
         background-color: rgb(88, 88, 88);
         color: white;
         font-size: 2em;
         font-family: monospace;
     }
-    
+
     .futrr {
         bottom: 0px;
         margin-bottom: -233px;
@@ -102,40 +102,40 @@
         -moz-box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.79);
         box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.79);
     }
-    
+
     a {
         text-decoration: none;
         color: white;
     }
-    
+
     #maj_mejl {
         margin-top: -1.3%;
         font-size: .84em;
     }
-    
+
     #maj_insta {
         margin-top: -.5%;
         font-size: .84em;
     }
-    
+
     #futer_jelde {
         margin-top: 5%;
         font-size: 1em;
     }
-    
+
     #insta_sl {
         margin-top: 1%;
         transition: all .1s ease-in-out;
     }
-    
+
     #insta_sl:hover {
         transform: scale(1.1);
     }
-    
+
     #slika_mail {
         transition: all .1s ease-in-out;
     }
-    
+
     #slika_mail:hover {
         transform: scale(1.1);
     }
@@ -143,77 +143,7 @@
 
 <body id="tijelo">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        function dugme() {
-            var divizija = document.createElement("div")
-            divizija.id = new Date().getTime() //unikaten id
-            divizija.style.backgroundColor = "rgba(100, 24, 122, 0.79)"
-            var dobitak = document.getElementById("text_za_ukc").value
-            divizija.style.color = "white"
-            divizija.style.fontSize = "2.1em"
-            divizija.style.margin = "1% 0% 1% 0%"
-            divizija.style.padding = "1.3% 10% 1.3% 10%"
-            divizija.style.webkitBoxShadow = "0px 0px 5px 1px rgba(62,14,77,1)"
-            divizija.style.boxShadow = "0px 0px 5px 1px rgba(62,14,77,1)"
-            divizija.innerHTML = dobitak
-            divizija.style.wordWrap = "break-word"
-            divizija.style.maxWidth = "83%"
-            divizija.style.border = "3px solid transparent"
-            divizija.style.borderImage = "url(https://img.lovepik.com/element/40130/0137.png_860.png) 20% round"
-            sacuvanje()
 
-            divizija.onmouseover = function() {
-                mouseOver()
-            }
-
-            divizija.onmouseout = function() {
-                mouseOut()
-            }
-
-            function mouseOver() {
-                divizija.style.backgroundColor = "rgba(52, 25, 59, 0.79)"
-                divizija.style.cursor = "pointer"
-            }
-
-            function mouseOut() {
-                divizija.style.backgroundColor = "rgba(100, 24, 122, 0.79)"
-            }
-
-            if (dobitak.trim().length != 0) {
-                $(divizija).hide().fadeIn(500)
-                document.getElementById("mojDiv").appendChild(divizija)
-            } else {
-                alert("The input field is required!")
-            }
-
-            function sacuvanje() {
-                localStorage.storedList = document.getElementById("mojDiv").innerHTML
-            }
-
-            function loudiranje() {
-                document.getElementById("mojDiv").innerHTML = localStorage.storedList;
-                for (var i = 0; i < list.children.length; i++) {
-                    list.children[i].onclick = removeItem;
-                }
-            }
-
-            $(divizija).on('contextmenu', function(event) {
-                let id = event.target.id
-
-                let isDelete = confirm('Delete?')
-                if (isDelete == true) {
-                    document.getElementById(id).remove()
-                    document.getElementById("mojDiv").removeChild(this);
-                    sacuvanje()
-                }
-            })
-
-        }
-
-        if (localStorage.storedList) {
-            loudiranje()
-        }
-    </script>
     <p id="ono_znas_naslov" align="center">Online Wishlist</p>
 
     <form class="forma_ideale">
@@ -242,6 +172,88 @@
         </div>
         <p id="futer_jelde">Filip Suvajac ©</p>
     </div>
+    <script>
+        function dugme() {
+            var divizija = document.createElement("div")
+            divizija.id = new Date().getTime() //unikaten id
+            divizija.style.backgroundColor = "rgba(100, 24, 122, 0.79)"
+            var dobitak = document.getElementById("text_za_ukc").value
+            divizija.style.color = "white"
+            divizija.style.fontSize = "2.1em"
+            divizija.style.margin = "1% 0% 1% 0%"
+            divizija.style.padding = "1.3% 10% 1.3% 10%"
+            divizija.style.webkitBoxShadow = "0px 0px 5px 1px rgba(62,14,77,1)"
+            divizija.style.boxShadow = "0px 0px 5px 1px rgba(62,14,77,1)"
+            divizija.innerHTML = dobitak
+            divizija.style.wordWrap = "break-word"
+            divizija.style.maxWidth = "83%"
+            divizija.style.border = "3px solid transparent"
+            divizija.style.borderImage = "url(https://img.lovepik.com/element/40130/0137.png_860.png) 20% round"
+
+            divizija.onmouseover = function() {
+                mouseOver()
+            }
+
+            divizija.onmouseout = function() {
+                mouseOut()
+            }
+
+            function mouseOver() {
+                divizija.style.backgroundColor = "rgba(52, 25, 59, 0.79)"
+                divizija.style.cursor = "pointer"
+            }
+
+            function mouseOut() {
+                divizija.style.backgroundColor = "rgba(100, 24, 122, 0.79)"
+            }
+
+            if (dobitak.trim().length != 0) {
+                $(divizija).hide().fadeIn(500)
+                document.getElementById("mojDiv").appendChild(divizija)
+                divizija.style.opacity = "1";
+                localStorage.setItem(divizija.id, divizija.outerHTML) //shrani vsak div v localstorage
+            } else {
+                alert("The input field is required!")
+            }
+
+            $(divizija).on('contextmenu', function(event) {
+                event.preventDefault();
+                let id = event.target.id
+
+                let isDelete = confirm('Delete?')
+                if (isDelete == true) {
+                    document.getElementById(id).remove()
+                    localStorage.removeItem(id)
+                }
+            })
+        }
+
+        if (localStorage.length != 0) { //nalozi obstojece elemenete iz iz localstorage
+          for (let [key, value] of Object.entries(localStorage)){
+            if(value.length != 0 && typeof value == 'string'){ //preveri da ni prazno in da je string
+              let wrapper = document.createElement('div')
+              wrapper.innerHTML = value
+              let divizija = wrapper.firstChild
+              divizija.classList.add("divizija")
+              divizija.id = key
+              divizija.onmouseover = (() => { divizija.style.backgroundColor = "rgba(52, 25, 59, 0.79)"; divizija.style.cursor = "pointer" })
+              divizija.onmouseout = (() => { divizija.style.backgroundColor = "rgba(100, 24, 122, 0.79)" })
+              document.getElementById("mojDiv").appendChild(divizija)
+            }
+          }
+        }
+
+        $(".divizija").on('contextmenu', function(event) {
+            event.preventDefault();
+            let id = event.target.id
+
+            let isDelete = confirm('Delete?')
+            if (isDelete == true) {
+                document.getElementById(id).remove()
+                localStorage.removeItem(id)
+            }
+        })
+    </script>
 </body>
 
 </html>
